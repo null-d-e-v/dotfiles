@@ -18,7 +18,8 @@ sudo apt install -y \
   fd-find \
   gcc \
   make \
-  unzip
+  unzip \
+  wget
 
 echo "Setting zsh as default shell..."
 chsh -s /bin/zsh
