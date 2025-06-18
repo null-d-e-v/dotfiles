@@ -24,13 +24,14 @@ config config --local status.showUntrackedFiles no
 # Check out the actual dotfiles into $HOME
 config checkout
 
+# Initialize and update Git submodules (e.g., plugins, tools)
+config submodule init
+config submodule update
+
 # Make the initial setup script executable and run it
 chmod +x ~/scripts/init.sh
 ~/scripts/init.sh
 
-# Initialize and update Git submodules (e.g., plugins, tools)
-config submodule init
-config submodule update
 
 # Start a new Zsh session (required for pyenv/nvm and other shell configs to take effect)
 exec zsh

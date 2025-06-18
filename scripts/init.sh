@@ -21,18 +21,14 @@ sudo apt install -y \
   unzip \
   wget
 
-echo "Setting zsh as default shell..."
-chsh -s /bin/zsh
 
-# Install Oh My Zsh if not already installed
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  echo "Installing Oh My Zsh..."
-  export CHSH=no
-  export KEEP_ZSHRC=yes
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-else
-  echo "Oh My Zsh is already installed."
-fi
+# Install Zellij
+echo "Installing Zellij (terminal multiplexer)..."
+wget https://github.com/zellij-org/zellij/releases/download/v0.42.2/zellij-x86_64-unknown-linux-musl.tar.gz -O z.tar.gz
+tar -xvf z.tar.gz
+chmod +x zellij
+sudo mv zellij /usr/bin/zellij
+rm z.tar.gz
 
 # Install Python Version Manager
 if ! command -v pyenv &> /dev/null; then
@@ -50,13 +46,18 @@ else
   echo "NVM is already installed."
 fi
 
+echo "Setting zsh as default shell..."
+chsh -s /bin/zsh
 
-# Install Zellij
-echo "Installing Zellij (terminal multiplexer)..."
-wget https://github.com/zellij-org/zellij/releases/download/v0.42.2/zellij-x86_64-unknown-linux-musl.tar.gz -O z.tar.gz
-tar -xvf z.tar.gz
-chmod +x zellij
-sudo mv zellij /usr/bin/zellij
-rm z.tar.gz
+# Install Oh My Zsh if not already installed
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  echo "Installing Oh My Zsh..."
+  export CHSH=no
+  export KEEP_ZSHRC=yes
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+  echo "Oh My Zsh is already installed."
+fi
+
 
 echo "✅ Environment setup complete."
