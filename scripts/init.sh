@@ -17,7 +17,8 @@ sudo apt install -y \
   fzf \
   fd-find \
   gcc \
-  make
+  make \
+  unzip
 
 echo "Setting zsh as default shell..."
 chsh -s /bin/zsh
@@ -46,21 +47,6 @@ else
   echo "NVM is already installed."
 fi
 
-# Install Bun
-if ! command -v bun &> /dev/null; then
-  echo "Installing Bun..."
-  curl -fsSL https://bun.sh/install | bash
-else
-  echo "Bun is already installed."
-fi
-
-# Install pnpm
-if ! command -v pnpm &> /dev/null; then
-  echo "Installing pnpm..."
-  curl -fsSL https://get.pnpm.io/install.sh | sh -
-else
-  echo "pnpm is already installed."
-fi
 
 # Install Zellij
 echo "Installing Zellij (terminal multiplexer)..."
