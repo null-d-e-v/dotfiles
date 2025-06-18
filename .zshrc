@@ -6,7 +6,6 @@ if [[ -z "$ZELLIJ" ]]; then
     fi
 fi
 
-alias mount="zellij attach workspace"
 
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -21,6 +20,7 @@ source $ZSH/oh-my-zsh.sh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+alias mount="zellij attach workspace"
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias ed="nvim ."
 alias ls="exa --color=always --icons -a"
@@ -57,18 +57,3 @@ export NVM_DIR="$HOME/.nvm"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-
-
-nvim() {
-    if ! pidof socat > /dev/null 2>&1; then
-        [ -e /tmp/discord-ipc-0 ] && rm -f /tmp/discord-ipc-0
-        socat UNIX-LISTEN:/tmp/discord-ipc-0,fork \
-            EXEC:"npiperelay.exe //./pipe/discord-ipc-0" 2>/dev/null &
-    fi
-
-    if [ $# -eq 0 ]; then
-        command nvim
-    else
-        command nvim "$@"
-    fi
-}
