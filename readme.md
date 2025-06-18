@@ -3,6 +3,9 @@
 ![example-image](./assets/example.png)
 
 ```bash
+# Go to home folder
+cd ~
+
 # Set up an alias to manage dotfiles as a bare Git repository
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
@@ -24,7 +27,6 @@ chmod +x ~/scripts/init.sh
 ~/scripts/init.sh
 
 # Start a new Zsh session (required for pyenv/nvm and other shell configs to take effect)
-echo "Starting a new Zsh session..."
 exec zsh
 
 # Make the development setup script executable and run it
