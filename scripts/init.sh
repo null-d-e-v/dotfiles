@@ -15,7 +15,9 @@ sudo apt install -y \
   trash-cli \
   exa \
   fzf \
-  fd-find
+  fd-find \
+  gcc \
+  make
 
 echo "Setting zsh as default shell..."
 chsh -s /bin/zsh
@@ -36,9 +38,6 @@ else
   echo "PYENV is already installed."
 fi
 
-echo "Installing Python 3.10..."
-pyenv install 3.10
-
 # Install Node Version Manager
 if ! command -v nvm &> /dev/null; then
   echo "Installing NVM (Node Version Manager)..."
@@ -46,10 +45,6 @@ if ! command -v nvm &> /dev/null; then
 else
   echo "NVM is already installed."
 fi
-
-# Install latest Node.js version
-echo "Installing latest Node.js version..."
-nvm install node
 
 # Install Bun
 if ! command -v bun &> /dev/null; then
