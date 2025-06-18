@@ -19,11 +19,15 @@ config checkout
 config submodule init
 config submodule update
 
-# Make custom setup scripts executable
+# Make the initial setup script executable and run it
 chmod +x ~/scripts/init.sh
-chmod +x ~/scripts/development.sh
-
-# Run the initialization and development environment setup scripts
 ~/scripts/init.sh
+
+# Start a new Zsh session (required for pyenv/nvm and other shell configs to take effect)
+echo "Starting a new Zsh session..."
+exec zsh
+
+# Make the development setup script executable and run it
+chmod +x ~/scripts/development.sh
 ~/scripts/development.sh
 ```
