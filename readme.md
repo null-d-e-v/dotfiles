@@ -6,6 +6,12 @@
 # Go to home folder
 cd ~
 
+# Upgrade your system
+sudo apt update && sudo apt upgrade
+
+# Install git
+sudo apt install git
+
 # Set up an alias to manage dotfiles as a bare Git repository
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
