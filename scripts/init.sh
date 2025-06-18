@@ -30,6 +30,12 @@ chmod +x zellij
 sudo mv zellij /usr/bin/zellij
 rm z.tar.gz
 
+echo "Installing Neovim ..."
+wget https://github.com/neovim/neovim/releases/download/v0.11.2/nvim-linux-x86_64.tar.gz
+tar -xvf nvim-linux-x86_64.tar.gz
+sudo mv nvim-linux-x86_64 /opt/nvim-linux-x86_64
+rm nvim-linux-x86_64.tar.gz
+
 # Install Python Version Manager
 if ! command -v pyenv &> /dev/null; then
   echo "Installing PYENV (Python Version Manager)..."
@@ -52,7 +58,7 @@ chsh -s /bin/zsh
 # Install Oh My Zsh if not already installed
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo "Installing Oh My Zsh..."
-  export CHSH=no
+  export CHSH=yes
   export KEEP_ZSHRC=yes
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
