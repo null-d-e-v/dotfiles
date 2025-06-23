@@ -2,30 +2,30 @@ return {
   {
     "folke/snacks.nvim",
     init = function()
-vim.api.nvim_set_hl(0, "nd1", { fg = "#7aa2f7" })
-vim.api.nvim_set_hl(0, "nd2", { fg = "#7ba3f5" })
-vim.api.nvim_set_hl(0, "nd3", { fg = "#7ca4f3" })
-vim.api.nvim_set_hl(0, "nd4", { fg = "#7da5f1" })
-vim.api.nvim_set_hl(0, "nd5", { fg = "#7ea6ef" })
-vim.api.nvim_set_hl(0, "nd6", { fg = "#7fa7ed" })
-vim.api.nvim_set_hl(0, "nd7", { fg = "#80a8eb" })
-vim.api.nvim_set_hl(0, "nd8", { fg = "#81a9e9" })
-vim.api.nvim_set_hl(0, "nd9", { fg = "#82aae7" })
-vim.api.nvim_set_hl(0, "nd10", { fg = "#83abe5" })
-vim.api.nvim_set_hl(0, "nd11", { fg = "#84ace3" })
-vim.api.nvim_set_hl(0, "nd12", { fg = "#85ade1" })
-vim.api.nvim_set_hl(0, "nd13", { fg = "#86aedf" })
-vim.api.nvim_set_hl(0, "nd14", { fg = "#87afdd" })
-vim.api.nvim_set_hl(0, "nd15", { fg = "#88b0db" })
-vim.api.nvim_set_hl(0, "nd16", { fg = "#89b1d9" })
-vim.api.nvim_set_hl(0, "nd17", { fg = "#8ab2d7" })
-vim.api.nvim_set_hl(0, "nd18", { fg = "#8bb3d5" })
-vim.api.nvim_set_hl(0, "nd19", { fg = "#8cb4d3" })
-vim.api.nvim_set_hl(0, "nd20", { fg = "#8db5d1" })
-vim.api.nvim_set_hl(0, "nd21", { fg = "#8eb6cf" })
-vim.api.nvim_set_hl(0, "nd22", { fg = "#8fb7cd" })
-vim.api.nvim_set_hl(0, "nd23", { fg = "#90b8cb" })
-vim.api.nvim_set_hl(0, "nd24", { fg = "#90b8cb" })
+      vim.api.nvim_set_hl(0, "nd1", { fg = "#7aa2f7" })
+      vim.api.nvim_set_hl(0, "nd2", { fg = "#7ba3f5" })
+      vim.api.nvim_set_hl(0, "nd3", { fg = "#7ca4f3" })
+      vim.api.nvim_set_hl(0, "nd4", { fg = "#7da5f1" })
+      vim.api.nvim_set_hl(0, "nd5", { fg = "#7ea6ef" })
+      vim.api.nvim_set_hl(0, "nd6", { fg = "#7fa7ed" })
+      vim.api.nvim_set_hl(0, "nd7", { fg = "#80a8eb" })
+      vim.api.nvim_set_hl(0, "nd8", { fg = "#81a9e9" })
+      vim.api.nvim_set_hl(0, "nd9", { fg = "#82aae7" })
+      vim.api.nvim_set_hl(0, "nd10", { fg = "#83abe5" })
+      vim.api.nvim_set_hl(0, "nd11", { fg = "#84ace3" })
+      vim.api.nvim_set_hl(0, "nd12", { fg = "#85ade1" })
+      vim.api.nvim_set_hl(0, "nd13", { fg = "#86aedf" })
+      vim.api.nvim_set_hl(0, "nd14", { fg = "#87afdd" })
+      vim.api.nvim_set_hl(0, "nd15", { fg = "#88b0db" })
+      vim.api.nvim_set_hl(0, "nd16", { fg = "#89b1d9" })
+      vim.api.nvim_set_hl(0, "nd17", { fg = "#8ab2d7" })
+      vim.api.nvim_set_hl(0, "nd18", { fg = "#8bb3d5" })
+      vim.api.nvim_set_hl(0, "nd19", { fg = "#8cb4d3" })
+      vim.api.nvim_set_hl(0, "nd20", { fg = "#8db5d1" })
+      vim.api.nvim_set_hl(0, "nd21", { fg = "#8eb6cf" })
+      vim.api.nvim_set_hl(0, "nd22", { fg = "#8fb7cd" })
+      vim.api.nvim_set_hl(0, "nd23", { fg = "#90b8cb" })
+      vim.api.nvim_set_hl(0, "nd24", { fg = "#90b8cb" })
     end,
     opts = {
       dashboard = {
@@ -55,7 +55,7 @@ vim.api.nvim_set_hl(0, "nd24", { fg = "#90b8cb" })
           { text = { [[ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⠁⣶⡄⣴⡆⢰⣦⠀⣶⠀⣴⡄⢤⡆⢠⣶⠠⣶⠄⢴⡆⢰⡞⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣆⠠⣶⠄⣴⡆⢰⡆⢠⡆⠀⣶⡄⣼⡏⢩⣯⠩⣭⠛⣛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ]], hl =  "nd22" }, align = "center" },
           { text = { [[ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢏⣤⠀⣤⡄⣤⡄⢠⣤⢀⣤⠀⣤⡄⢠⡄⢠⣤⠀⣤⡀⣤⡄⢠⣄⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢣⣄⢠⣤⡀⣤⡄⢠⣄⢠⣄⠀⣤⡄⣠⡄⢠⣤⠀⣤⠀⣤⡄⣈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ ]], hl =  "nd23" }, align = "center" },
           { text = { [[ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣅⠀⣭⡀⣨⣁⢈⣅⠀⣭⠀⣩⡀⢨⣅⢀⣭⢀⣩⡀⣨⡅⢈⣅⢈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⢀⣁⢀⣩⡀⣨⡁⢈⣅⢀⣍⠀⣉⡀⣨⡅⢈⣅⠀⣍⡀⣉⡁⣈⣅⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿ ]], hl =  "nd24" }, align = "center", padding= 2 },
-          { icon = " ",  title = "Keymaps", section = "keys", indent = 2, padding = 1 },
+          { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
           { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
           { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
           { section = "startup" },

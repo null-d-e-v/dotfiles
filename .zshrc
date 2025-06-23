@@ -30,8 +30,12 @@ alias rml="trash-list"
 alias bat="batcat"
 
 # Path customization
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH="$PATH:/mnt/c/Tools"
+export PATH="$PATH:/mnt/c/Windows/System32"
+export PATH="$PATH:/mnt/c/Windows/System32/WindowsPowerShell/v1.0"
 
 # Batcat configuration
 export BAT_THEME="Catppuccin Mocha"

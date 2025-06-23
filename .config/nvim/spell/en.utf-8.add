@@ -4,3 +4,6 @@ bcrypt
 Elysia
 Lua
 Pnpm
+Redis
+UUID
+JWT

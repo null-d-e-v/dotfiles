@@ -36,11 +36,13 @@ return {
   { import = "astrocommunity.utility.hover-nvim" },
   { import = "astrocommunity.lsp.actions-preview-nvim" },
   { import = "astrocommunity.quickfix.quicker-nvim" },
-  { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.note-taking.global-note-nvim" },
   { import = "astrocommunity.search.grug-far-nvim" },
+  { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
+  { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
 
   -- Upgrades
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   { import = "astrocommunity.icon.mini-icons" },
+  { import = "astrocommunity.indent.snacks-indent-hlchunk" },
 }
