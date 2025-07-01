@@ -40,6 +40,7 @@ return {
   { import = "astrocommunity.search.grug-far-nvim" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
+  { import = "astrocommunity.motion.mini-surround" },
 
   -- Upgrades
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },

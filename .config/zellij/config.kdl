@@ -273,3 +273,4 @@ pane_frames false
 theme "tokyo-night-dark"
 default_cwd "~"
 show_startup_tips false
+session_serialization false

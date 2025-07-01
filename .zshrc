@@ -15,7 +15,7 @@ fi
 export ZSH_CUSTOM="$HOME/.zsh-custom"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-you-should-use)
+plugins=(git zsh-autosuggestions zsh-autocomplete zsh-syntax-highlighting zsh-you-should-use)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -31,6 +31,7 @@ alias bat="batcat"
 
 # Path customization
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/root/.local/bin
 export PATH=$PATH:$HOME/go/bin
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH="$PATH:/mnt/c/Tools"
@@ -40,6 +41,8 @@ export PATH="$PATH:/mnt/c/Windows/System32/WindowsPowerShell/v1.0"
 # Batcat configuration
 export BAT_THEME="Catppuccin Mocha"
 
+# Zoxide
+eval "$(zoxide init --cmd cd zsh)"
 
 # bun completions
 [ -s "/root/.bun/_bun" ] && source "/root/.bun/_bun"
