@@ -23,6 +23,9 @@ return {
         wrap = false, -- sets vim.opt.wrap
       },
       g = {
+        gruvbox_material_enable_italic = true,
+        gruvbox_material_better_performance = 1,
+        gruvbox_material_background = "hard",
         clipboard = {
           name = "WslClipboard",
           copy = {

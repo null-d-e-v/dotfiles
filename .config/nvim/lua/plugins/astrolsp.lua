@@ -7,8 +7,35 @@ return {
       vtsls = {
         settings = {
           typescript = {
+            inlayHints = true,
             preferences = {
               importModuleSpecifier = "non-relative",
+              preferTypeOnlyAutoImports = true,
+            },
+            format = {
+              enable = false,
+            },
+          },
+        },
+      },
+      tailwindcss = {
+        settings = {
+          tailwindCSS = {
+            experimental = {
+              classRegex = {
+                { "\\b\\w*Style\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]" },
+                { "\\b\\w*ClassName\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]" },
+                { "\\b\\w*ClassNames\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]" },
+                {
+                  "clsx\\(((?:[^()]|\\([^()]*\\))*)\\)",
+                  "(?:'|\"|`)([^']*)(?:'|\"|`)",
+                },
+
+                {
+                  "cn\\(((?:[^()]|\\([^()]*\\))*)\\)",
+                  "(?:'|\"|`)([^']*)(?:'|\"|`)",
+                },
+              },
             },
           },
         },

@@ -1,8 +1,12 @@
 return {
   {
+    "sainnhe/gruvbox-material",
+    lazy = true,
+  },
+  {
     "AstroNvim/astroui",
     opts = {
-      colorscheme = "tokyonight-night",
+      colorscheme = "gruvbox-material",
       icons = {
         LSPLoading1 = "⠋",
         LSPLoading2 = "⠙",
