@@ -39,7 +39,7 @@ export PATH="$PATH:/mnt/c/Windows/System32"
 export PATH="$PATH:/mnt/c/Windows/System32/WindowsPowerShell/v1.0"
 
 # Batcat configuration
-export BAT_THEME="Catppuccin Mocha"
+export BAT_THEME="gruvbox-dark"
 
 # Zoxide
 eval "$(zoxide init --cmd cd zsh)"
@@ -65,3 +65,16 @@ export NVM_DIR="$HOME/.nvm"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+
+
+
+#Docker autostart
+DOCKER_DISTRO="debian"
+DOCKER_DIR=/mnt/wsl/shared-docker
+DOCKER_SOCK="$DOCKER_DIR/docker.sock"
+export DOCKER_HOST="unix://$DOCKER_SOCK"
+if [ ! -S "$DOCKER_SOCK" ]; then
+  mkdir -pm o=,ug=rwx "$DOCKER_DIR"
+  chgrp docker "$DOCKER_DIR"
+  /mnt/c/Windows/System32/wsl.exe -d $DOCKER_DISTRO sh -c "nohup sudo -b dockerd < /dev/null > $DOCKER_DIR/dockerd.log 2>&1"
+fi
