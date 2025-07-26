@@ -68,7 +68,7 @@ keybinds clear-defaults=true {
         bind "j" { Resize "Increase down"; }
         bind "k" { Resize "Increase up"; }
         bind "l" { Resize "Increase right"; }
-        bind "Alt n" { SwitchToMode "normal"; }
+        bind "Alt y" { SwitchToMode "normal"; }
     }
     move {
         bind "left" { MovePane "left"; }
@@ -166,7 +166,7 @@ keybinds clear-defaults=true {
         bind "Alt p" { SwitchToMode "pane"; }
     }
     shared_except "locked" "resize" {
-        bind "Alt n" { SwitchToMode "resize"; }
+        bind "Alt y" { SwitchToMode "resize"; }
     }
     shared_except "normal" "locked" "entersearch" {
         bind "enter" { SwitchToMode "normal"; }
@@ -269,8 +269,129 @@ load_plugins {
     zjstatus-hints
 }
 
+themes {
+  gruvbox-material-dark {
+    text_unselected {
+      base        "#d4be98"
+      background  "#282828"
+      emphasis_0  "#ea6962"
+      emphasis_1  "#a9b665"
+      emphasis_2  "#d8a657"
+      emphasis_3  "#d3869b"
+    }
+    text_selected {
+      base        "#d4be98"
+      background  "#32302f"
+      emphasis_0  "#ea6962"
+      emphasis_1  "#a9b665"
+      emphasis_2  "#d8a657"
+      emphasis_3  "#d3869b"
+    }
+    ribbon_selected {
+      base        "#282828"
+      background  "#a9b665"
+      emphasis_0  "#ea6962"
+      emphasis_1  "#e78a4e"
+      emphasis_2  "#d3869b"
+      emphasis_3  "#7daea3"
+    }
+    ribbon_unselected {
+      base        "#282828"
+      background  "#d4be98"
+      emphasis_0  "#ea6962"
+      emphasis_1  "#d4be98"
+      emphasis_2  "#7daea3"
+      emphasis_3  "#d3869b"
+    }
+    table_title {
+      base        "#a9b665"
+      background  "#1d2021"
+      emphasis_0  "#e78a4e"
+      emphasis_1  "#a9b665"
+      emphasis_2  "#d8a657"
+      emphasis_3  "#d3869b"
+    }
+    table_cell_selected {
+      base        "#d4be98"
+      background  "#32302f"
+      emphasis_0  "#ea6962"
+      emphasis_1  "#a9b665"
+      emphasis_2  "#d8a657"
+      emphasis_3  "#d3869b"
+    }
+    table_cell_unselected {
+      base        "#d4be98"
+      background  "#282828"
+      emphasis_0  "#ea6962"
+      emphasis_1  "#a9b665"
+      emphasis_2  "#d8a657"
+      emphasis_3  "#d3869b"
+    }
+    list_selected {
+      base        "#d4be98"
+      background  "#32302f"
+      emphasis_0  "#ea6962"
+      emphasis_1  "#a9b665"
+      emphasis_2  "#d8a657"
+      emphasis_3  "#d3869b"
+    }
+    list_unselected {
+      base        "#d4be98"
+      background  "#282828"
+      emphasis_0  "#ea6962"
+      emphasis_1  "#a9b665"
+      emphasis_2  "#d8a657"
+      emphasis_3  "#d3869b"
+    }
+    frame_selected {
+      base        "#a9b665"
+      background  "#1d2021"
+      emphasis_0  "#e78a4e"
+      emphasis_1  "#a9b665"
+      emphasis_2  "#d3869b"
+      emphasis_3  "#1d2021"
+    }
+    frame_highlight {
+      base        "#e78a4e"
+      background  "#1d2021"
+      emphasis_0  "#d3869b"
+      emphasis_1  "#e78a4e"
+      emphasis_2  "#e78a4e"
+      emphasis_3  "#e78a4e"
+    }
+    exit_code_success {
+      base        "#a9b665"
+      background  "#1d2021"
+      emphasis_0  "#89b482"
+      emphasis_1  "#282828"
+      emphasis_2  "#d3869b"
+      emphasis_3  "#7daea3"
+    }
+    exit_code_error {
+      base        "#ea6962"
+      background  "#1d2021"
+      emphasis_0  "#e3a84e"
+      emphasis_1  "#1d2021"
+      emphasis_2  "#1d2021"
+      emphasis_3  "#1d2021"
+    }
+    multiplayer_user_colors {
+      player_1  "#d3869b"
+      player_2  "#7daea3"
+      player_3  "#1d2021"
+      player_4  "#d8a657"
+      player_5  "#a9b665"
+      player_6  "#1d2021"
+      player_7  "#ea6962"
+      player_8  "#1d2021"
+      player_9  "#1d2021"
+      player_10 "#1d2021"
+    }
+  }
+}
+
 pane_frames false
-theme "tokyo-night-dark"
+theme "gruvbox-material-dark"
 default_cwd "~"
 show_startup_tips false
 session_serialization false
