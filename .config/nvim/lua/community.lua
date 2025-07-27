@@ -1,8 +1,5 @@
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
-
   -- Python
   { import = "astrocommunity.pack.python" },
 
@@ -40,6 +37,7 @@ return {
   { import = "astrocommunity.search.grug-far-nvim" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
+  { import = "astrocommunity.editing-support.vim-doge" },
   { import = "astrocommunity.motion.mini-surround" },
 
   -- Upgrades
