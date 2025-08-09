@@ -1,13 +1,23 @@
 return {
   "AstroNvim/astrolsp",
+  ---@diagnostic disable: missing-fields
   ---@type AstroLSPOpts
   opts = {
     -- Configuration table of features provided by AstroLSP
     config = {
       vtsls = {
         settings = {
+          vtsls = {
+            experimental = {
+              completion = {
+                enableServerSideFuzzyMatch = true,
+              },
+            },
+          },
           typescript = {
-            inlayHints = true,
+            tsserver = {
+              maxTsServerMemory = 8192,
+            },
             preferences = {
               importModuleSpecifier = "non-relative",
               preferTypeOnlyAutoImports = true,

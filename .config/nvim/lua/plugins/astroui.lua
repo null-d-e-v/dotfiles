@@ -19,6 +19,7 @@ return {
       },
     },
   },
+  ---@type AstroUIOpts
   {
     "AstroNvim/astroui",
     opts = {

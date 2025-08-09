@@ -12,6 +12,10 @@ return {
       vim.api.nvim_set_hl(0, "ng8", { fg = "#d0e675" })
     end,
     opts = {
+      indent = {
+        enabled = false,
+      },
+
       dashboard = {
         width = 80,
         sections = {
